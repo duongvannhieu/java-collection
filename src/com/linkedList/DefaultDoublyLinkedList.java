@@ -90,7 +90,7 @@ public class DefaultDoublyLinkedList<T> implements DoublyLinkedList<T> {
     public T removeLast() {
         if (isEmpty()) throw new RuntimeException("Empty Linked List");
         T data = tail.getData();
-        tail = head.getPrev();
+        tail = tail.getPrev();
         size--;
         if (isEmpty()) head = null;
         else tail.setNext(null);
